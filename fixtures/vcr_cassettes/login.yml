@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://coolpay.herokuapp.com/api/login
+    body:
+      encoding: UTF-8
+      string: '{"username":"GarethH","apikey":"945AF053C4694E1E"}'
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      connection:
+      - close
+      server:
+      - Cowboy
+      date:
+      - Tue, 18 Sep 2018 07:32:30 GMT
+      content-length:
+      - '48'
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - max-age=0, private, must-revalidate
+      strict-transport-security:
+      - max-age=31536000
+      x-request-id:
+      - a6b078df-f302-46b1-809b-730ab3a8dd30
+      via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"token":"6ff2b474-2c89-45f5-b242-16af7a7f7ae1"}'
+    http_version: 
+  recorded_at: Tue, 18 Sep 2018 07:32:30 GMT
+- request:
+    method: post
+    uri: https://coolpay.herokuapp.com/api/login
+    body:
+      encoding: UTF-8
+      string: '{"username":"NotValid","apikey":"still_not_valid"}'
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      connection:
+      - close
+      server:
+      - Cowboy
+      date:
+      - Tue, 18 Sep 2018 07:32:30 GMT
+      content-length:
+      - '23'
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - max-age=0, private, must-revalidate
+      strict-transport-security:
+      - max-age=31536000
+      x-request-id:
+      - 1d96f20f-beca-49b3-a3c4-dfbc76fb7bd3
+      via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '"Internal server error"'
+    http_version: 
+  recorded_at: Tue, 18 Sep 2018 07:32:30 GMT
+recorded_with: VCR 4.0.0

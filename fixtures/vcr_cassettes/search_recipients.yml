@@ -1,0 +1,142 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://coolpay.herokuapp.com/api/login
+    body:
+      encoding: UTF-8
+      string: '{"username":"GarethH","apikey":"945AF053C4694E1E"}'
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      connection:
+      - close
+      server:
+      - Cowboy
+      date:
+      - Tue, 18 Sep 2018 07:32:30 GMT
+      content-length:
+      - '48'
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - max-age=0, private, must-revalidate
+      strict-transport-security:
+      - max-age=31536000
+      x-request-id:
+      - 1eed3106-7899-4ee3-aa57-67843f6b6b8d
+      via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"token":"304cbdc3-ab0f-425f-9fb3-51e570516ae6"}'
+    http_version: 
+  recorded_at: Tue, 18 Sep 2018 07:32:30 GMT
+- request:
+    method: get
+    uri: https://coolpay.herokuapp.com/api/recipients
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer 304cbdc3-ab0f-425f-9fb3-51e570516ae6
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      connection:
+      - close
+      server:
+      - Cowboy
+      date:
+      - Tue, 18 Sep 2018 07:32:30 GMT
+      content-length:
+      - '2529'
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - max-age=0, private, must-revalidate
+      strict-transport-security:
+      - max-age=31536000
+      x-request-id:
+      - 3fff4ccb-7edd-404f-8d6d-f056fca5006f
+      via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"recipients":[{"name":"Harry Tester","id":"811e18e7-0daf-441a-b04e-6857632921c2"},{"name":"Harry
+        Sender","id":"1107d0c0-15d1-4eb2-bd37-8a7e12893a97"},{"name":"Harry Sender","id":"a403cdf5-4ecd-4ba9-8ab9-b025cedc07db"},{"name":"Harry
+        Sender","id":"d888eb79-10e1-490f-adb0-4ea7cc434006"},{"name":"Harry Tester","id":"1cf3a0c6-03f1-4647-92f7-e5c00831aba3"},{"name":"Harry
+        Tester","id":"0e6b03e4-5eba-45be-b826-c9d699a7ee11"},{"name":"Harriet Recipient","id":"62d23441-339d-4367-8022-1117615302de"},{"name":"Harry
+        Tester","id":"189cde12-9b79-4c9d-8c12-80b16be06588"},{"name":"Harry Sender","id":"386b4eab-6c36-40ab-a9bc-d2a8c2ecc63a"},{"name":"Harriet
+        Recipient","id":"7303738b-5b68-4734-b3c6-ff9a70968bfe"},{"name":"Harry Sender","id":"9a0c86ad-d5dc-4753-97b8-9806d8bff998"},{"name":"Harry
+        Tester","id":"c4f24db9-1aae-434d-a669-e31fa7ef4a5f"},{"name":"Harry Tester","id":"a6625551-c56f-4721-ad7c-e1baab08e8fb"},{"name":"Harry
+        Tester","id":"baa049b3-9e09-433c-9fd2-034b13bcc1e4"},{"name":"Harry Sender","id":"865ddd2e-cd55-48d1-9f7a-bacb6c847111"},{"name":"Harry
+        Tester","id":"0e289706-4da4-4872-b1da-6d1ec6049945"},{"name":"Harry Sender","id":"b3d9918f-6b96-4631-9f24-01b00621f6ab"},{"name":"Harry
+        Tester","id":"5d6b94bc-fa8c-4533-a4db-66b145bdac49"},{"name":"Harriet Recipient","id":"9a1ba468-eafc-4776-9782-c8d695fe9b43"},{"name":"Harriet
+        Recipient","id":"2948198a-795c-45cc-b8f4-726244fd669f"},{"name":"Harry Sender","id":"73471104-c7b8-4325-80fc-2cdf83c1e0fd"},{"name":"Harriet
+        Recipient","id":"17954c9a-8c38-4b9b-9a66-265fa91c008c"},{"name":"Harriet Recipient","id":"d88a5d36-7b57-46bd-a2a7-88e5591f1154"},{"name":"Harriet
+        Recipient","id":"7ccd15f2-c655-497d-b5ac-8d12a78126d1"},{"name":"Harriet Recipient","id":"8a8cb8bb-b6b1-4056-a0c7-53dc26076f9b"},{"name":"Harry
+        Sender","id":"62e92d7e-0380-4075-a06a-47e1b0ae2bdc"},{"name":"Harriet Recipient","id":"c7036391-2b74-4fdf-9d10-5d1fcf124f7f"},{"name":"Harry
+        Sender","id":"d04be119-8a4d-4c89-849c-2efd42e3defb"},{"name":"Harriet Recipient","id":"f81998d4-5d81-4609-a8e6-74925c86ca38"},{"name":"Harry
+        Sender","id":"951cbacb-742c-49e7-bf6b-9989654afa9a"},{"name":"Harriet Recipient","id":"5124d763-8127-4fca-89a3-682e4cb13ed1"},{"name":"Harry
+        Sender","id":"246b1e9d-3d71-4a41-b6ac-928786a3bd8e"},{"name":"Harriet Recipient","id":"f7c5ad33-36da-452f-984a-a008509b9fc4"},{"name":"Harry
+        Sender","id":"9d94b402-ee7f-4c98-9e75-3dd3569d1063"},{"name":"Harriet Recipient","id":"092ac1f8-4170-4d8f-b31d-5d81d6271633"},{"name":"Harry
+        Tester","id":"107597a8-4563-4f10-8e4f-cd4992cd2be0"}]}'
+    http_version: 
+  recorded_at: Tue, 18 Sep 2018 07:32:30 GMT
+- request:
+    method: get
+    uri: https://coolpay.herokuapp.com/api/recipients?name=this+should+never+be+found
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer 304cbdc3-ab0f-425f-9fb3-51e570516ae6
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      connection:
+      - close
+      server:
+      - Cowboy
+      date:
+      - Tue, 18 Sep 2018 07:32:30 GMT
+      content-length:
+      - '17'
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - max-age=0, private, must-revalidate
+      strict-transport-security:
+      - max-age=31536000
+      x-request-id:
+      - fc9a3a9c-65c7-45e4-a969-2d593090f7d3
+      via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"recipients":[]}'
+    http_version: 
+  recorded_at: Tue, 18 Sep 2018 07:32:31 GMT
+recorded_with: VCR 4.0.0

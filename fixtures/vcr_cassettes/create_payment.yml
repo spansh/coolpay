@@ -1,0 +1,171 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://coolpay.herokuapp.com/api/login
+    body:
+      encoding: UTF-8
+      string: '{"username":"GarethH","apikey":"945AF053C4694E1E"}'
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      connection:
+      - close
+      server:
+      - Cowboy
+      date:
+      - Tue, 18 Sep 2018 07:32:29 GMT
+      content-length:
+      - '48'
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - max-age=0, private, must-revalidate
+      strict-transport-security:
+      - max-age=31536000
+      x-request-id:
+      - ecbd0409-ae05-4851-9c4a-9195dabb1b98
+      via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"token":"f79707af-886a-48c1-a77d-75e746d1ab61"}'
+    http_version: 
+  recorded_at: Tue, 18 Sep 2018 07:32:29 GMT
+- request:
+    method: post
+    uri: https://coolpay.herokuapp.com/api/recipients
+    body:
+      encoding: UTF-8
+      string: '{"recipient":{"name":"Harry Sender"}}'
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer f79707af-886a-48c1-a77d-75e746d1ab61
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      connection:
+      - close
+      server:
+      - Cowboy
+      date:
+      - Tue, 18 Sep 2018 07:32:29 GMT
+      content-length:
+      - '81'
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - max-age=0, private, must-revalidate
+      strict-transport-security:
+      - max-age=31536000
+      x-request-id:
+      - 7349abfc-5fda-48eb-9812-1d5210bb5503
+      location:
+      - "/api/recipients/9d94b402-ee7f-4c98-9e75-3dd3569d1063"
+      via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"recipient":{"name":"Harry Sender","id":"9d94b402-ee7f-4c98-9e75-3dd3569d1063"}}'
+    http_version: 
+  recorded_at: Tue, 18 Sep 2018 07:32:29 GMT
+- request:
+    method: post
+    uri: https://coolpay.herokuapp.com/api/recipients
+    body:
+      encoding: UTF-8
+      string: '{"recipient":{"name":"Harriet Recipient"}}'
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer f79707af-886a-48c1-a77d-75e746d1ab61
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      connection:
+      - close
+      server:
+      - Cowboy
+      date:
+      - Tue, 18 Sep 2018 07:32:29 GMT
+      content-length:
+      - '86'
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - max-age=0, private, must-revalidate
+      strict-transport-security:
+      - max-age=31536000
+      x-request-id:
+      - 4023525a-b3c5-4a5e-a663-6b85e36cdf40
+      location:
+      - "/api/recipients/092ac1f8-4170-4d8f-b31d-5d81d6271633"
+      via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"recipient":{"name":"Harriet Recipient","id":"092ac1f8-4170-4d8f-b31d-5d81d6271633"}}'
+    http_version: 
+  recorded_at: Tue, 18 Sep 2018 07:32:29 GMT
+- request:
+    method: post
+    uri: https://coolpay.herokuapp.com/api/payments
+    body:
+      encoding: UTF-8
+      string: '{"payment":{"id":"9d94b402-ee7f-4c98-9e75-3dd3569d1063","recipient_id":"092ac1f8-4170-4d8f-b31d-5d81d6271633","currency":"GBP","amount":10.0}}'
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer f79707af-886a-48c1-a77d-75e746d1ab61
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      connection:
+      - close
+      server:
+      - Cowboy
+      date:
+      - Tue, 18 Sep 2018 07:32:29 GMT
+      content-length:
+      - '166'
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - max-age=0, private, must-revalidate
+      strict-transport-security:
+      - max-age=31536000
+      x-request-id:
+      - e46ee9bd-0fb0-49b8-a245-ecce9f6003f0
+      location:
+      - "/api/payments/32db2e89-34d6-4162-9700-fea8fa01a2f6"
+      via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"payment":{"status":"processing","recipient_id":"092ac1f8-4170-4d8f-b31d-5d81d6271633","id":"32db2e89-34d6-4162-9700-fea8fa01a2f6","currency":"GBP","amount":"10.0"}}'
+    http_version: 
+  recorded_at: Tue, 18 Sep 2018 07:32:29 GMT
+recorded_with: VCR 4.0.0

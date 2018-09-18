@@ -1,0 +1,83 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://coolpay.herokuapp.com/api/login
+    body:
+      encoding: UTF-8
+      string: '{"username":"GarethH","apikey":"945AF053C4694E1E"}'
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      connection:
+      - close
+      server:
+      - Cowboy
+      date:
+      - Tue, 18 Sep 2018 07:32:29 GMT
+      content-length:
+      - '48'
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - max-age=0, private, must-revalidate
+      strict-transport-security:
+      - max-age=31536000
+      x-request-id:
+      - a9afeb04-8d5a-42e0-a2d1-c62200ddb147
+      via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"token":"aa8478c6-109e-45b2-8da3-2161ef98aabf"}'
+    http_version: 
+  recorded_at: Tue, 18 Sep 2018 07:32:30 GMT
+- request:
+    method: get
+    uri: https://coolpay.herokuapp.com/api/payments
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer aa8478c6-109e-45b2-8da3-2161ef98aabf
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      connection:
+      - close
+      server:
+      - Cowboy
+      date:
+      - Tue, 18 Sep 2018 07:32:29 GMT
+      content-length:
+      - '1216'
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - max-age=0, private, must-revalidate
+      strict-transport-security:
+      - max-age=31536000
+      x-request-id:
+      - 5b028ca4-7bfe-4766-8f94-610b7e06bf8f
+      via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"payments":[{"status":"paid","recipient_id":"7303738b-5b68-4734-b3c6-ff9a70968bfe","id":"9d2d2b74-79d7-410d-b88f-c7f877dc649d","currency":"GBP","amount":"10.0"},{"status":"paid","recipient_id":"2948198a-795c-45cc-b8f4-726244fd669f","id":"69e28a97-7ccb-4ac0-a694-a6a3a0fb774f","currency":"GBP","amount":"10.0"},{"status":"paid","recipient_id":"8a8cb8bb-b6b1-4056-a0c7-53dc26076f9b","id":"f6b5a759-b764-4187-8ec1-fd9f365283f4","currency":"GBP","amount":"10.0"},{"status":"paid","recipient_id":"62d23441-339d-4367-8022-1117615302de","id":"df858660-a06d-43b1-b5f8-0db2b154e271","currency":"GBP","amount":"10.0"},{"status":"paid","recipient_id":"f81998d4-5d81-4609-a8e6-74925c86ca38","id":"98e52149-c932-4d0f-8ffc-a2034f306cb2","currency":"GBP","amount":"10.0"},{"status":"failed","recipient_id":"5124d763-8127-4fca-89a3-682e4cb13ed1","id":"9f0a5a73-e1ed-4ba7-9fc1-daac5f5556f1","currency":"GBP","amount":"10.0"},{"status":"failed","recipient_id":"f7c5ad33-36da-452f-984a-a008509b9fc4","id":"3c913c46-e35f-44fc-a5f0-5ae8a1cd0ae6","currency":"GBP","amount":"10.0"},{"status":"processing","recipient_id":"092ac1f8-4170-4d8f-b31d-5d81d6271633","id":"32db2e89-34d6-4162-9700-fea8fa01a2f6","currency":"GBP","amount":"10.0"}]}'
+    http_version: 
+  recorded_at: Tue, 18 Sep 2018 07:32:30 GMT
+recorded_with: VCR 4.0.0

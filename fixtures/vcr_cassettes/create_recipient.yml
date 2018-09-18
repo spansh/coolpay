@@ -1,0 +1,85 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://coolpay.herokuapp.com/api/login
+    body:
+      encoding: UTF-8
+      string: '{"username":"GarethH","apikey":"945AF053C4694E1E"}'
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      connection:
+      - close
+      server:
+      - Cowboy
+      date:
+      - Tue, 18 Sep 2018 07:32:29 GMT
+      content-length:
+      - '48'
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - max-age=0, private, must-revalidate
+      strict-transport-security:
+      - max-age=31536000
+      x-request-id:
+      - 39d87b87-fb0e-4a65-9584-26fd9f284fd3
+      via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"token":"0d300b22-8867-4a93-8fd2-0549d31b6cd1"}'
+    http_version: 
+  recorded_at: Tue, 18 Sep 2018 07:32:29 GMT
+- request:
+    method: post
+    uri: https://coolpay.herokuapp.com/api/recipients
+    body:
+      encoding: UTF-8
+      string: '{"recipient":{"name":"Harry Tester"}}'
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer 0d300b22-8867-4a93-8fd2-0549d31b6cd1
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      connection:
+      - close
+      server:
+      - Cowboy
+      date:
+      - Tue, 18 Sep 2018 07:32:29 GMT
+      content-length:
+      - '81'
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - max-age=0, private, must-revalidate
+      strict-transport-security:
+      - max-age=31536000
+      x-request-id:
+      - c968525c-59af-46b5-82d6-e9cd1b4044ba
+      location:
+      - "/api/recipients/107597a8-4563-4f10-8e4f-cd4992cd2be0"
+      via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"recipient":{"name":"Harry Tester","id":"107597a8-4563-4f10-8e4f-cd4992cd2be0"}}'
+    http_version: 
+  recorded_at: Tue, 18 Sep 2018 07:32:30 GMT
+recorded_with: VCR 4.0.0
